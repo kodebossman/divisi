@@ -34,5 +34,7 @@ public class Village extends BaseEntity {
     private String town;
     @Column(name="growth_point")
     private String growthPoint;
+    @Column(name="village_type")
+    private String villageType;
 
 }

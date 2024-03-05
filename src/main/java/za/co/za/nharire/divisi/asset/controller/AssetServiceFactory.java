@@ -2,9 +2,9 @@ package za.co.za.nharire.divisi.asset.controller;
 import za.co.za.nharire.divisi.asset.model.Asset;
 
 import za.co.za.nharire.divisi.asset.service.GenericAssetServiceImpl;
-import za.co.za.nharire.divisi.asset.subAssets.EMovableAssets;
-import za.co.za.nharire.divisi.asset.subAssets.Machinery;
-import za.co.za.nharire.divisi.asset.subAssets.Vehicle;
+import za.co.za.nharire.divisi.asset.subassets.EMovableAssets;
+import za.co.za.nharire.divisi.asset.subassets.Machinery;
+import za.co.za.nharire.divisi.asset.subassets.Vehicle;
 import za.co.za.nharire.divisi.enums.AssetType;
 
 import java.util.HashMap;

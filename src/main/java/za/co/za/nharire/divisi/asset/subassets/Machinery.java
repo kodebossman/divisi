@@ -1,9 +1,11 @@
-package za.co.za.nharire.divisi.asset.subAssets;
+package za.co.za.nharire.divisi.asset.subassets;
 import lombok.Data;
 import lombok.ToString;
 import za.co.za.nharire.divisi.asset.model.Asset;
 
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -19,6 +21,9 @@ public class Machinery extends Asset {
 
     @Column(name = "year_of_manufacture")
     private int yearOfManufacture;
+
+    @Column(name = "millage")
+    private Double millage;
 
 
 }

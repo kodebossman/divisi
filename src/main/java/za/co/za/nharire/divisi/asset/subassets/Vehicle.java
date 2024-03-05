@@ -1,4 +1,4 @@
-package za.co.za.nharire.divisi.asset.subAssets;
+package za.co.za.nharire.divisi.asset.subassets;
 
 
 import jakarta.persistence.*;

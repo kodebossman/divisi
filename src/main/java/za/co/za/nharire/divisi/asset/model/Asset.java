@@ -11,9 +11,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
-import za.co.za.nharire.divisi.asset.subAssets.EMovableAssets;
-import za.co.za.nharire.divisi.asset.subAssets.Machinery;
-import za.co.za.nharire.divisi.asset.subAssets.Vehicle;
+import za.co.za.nharire.divisi.asset.subassets.EMovableAssets;
+import za.co.za.nharire.divisi.asset.subassets.Machinery;
+import za.co.za.nharire.divisi.asset.subassets.Vehicle;
 import za.co.za.nharire.divisi.enums.AssetType;
 import za.co.za.nharire.divisi.enums.Status;
 
@@ -66,6 +66,8 @@ public abstract class Asset {
     @Column(name = "asset_type", insertable = true, updatable = true)
     private AssetType assetType;
     private BigDecimal value;
+
+    @Column(name = "farmerId", nullable = false)
     private Long farmerId;
 
     public Asset() {

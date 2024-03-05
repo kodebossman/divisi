@@ -42,10 +42,7 @@ public class GenericAssetServiceImpl<T extends Asset> implements AssetService<T>
     @Override
     public T findById(Long id) {
         Optional<T> assetOptional = assetRepository.findById(id);
-        if (assetOptional.isPresent()) {
-            return assetOptional.get();
-        }
-        return null;
+        return assetOptional.orElse(null);
     }
 
     @Override

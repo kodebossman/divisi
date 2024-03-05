@@ -1,4 +1,4 @@
-package za.co.za.nharire.divisi.asset.subAssets;
+package za.co.za.nharire.divisi.asset.subassets;
 
 
 import jakarta.persistence.*;
@@ -16,12 +16,14 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 public class EMovableAssets extends Asset {
 
-    @Column(name = "land_area")
-    private BigDecimal landArea;
+    @Column(name = "assert_type")
+    private String assertType;
 
-    @Column(name = "water_source")
-    private String waterSource;
+    @Column(name = "capacity")
+    private BigDecimal  capacity;
 
+    @Column(name = "capacity_type")
+    private String capacityType;
 
 }
 

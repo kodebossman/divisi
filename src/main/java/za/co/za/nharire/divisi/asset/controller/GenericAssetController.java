@@ -1,12 +1,9 @@
 package za.co.za.nharire.divisi.asset.controller;
 
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.co.za.nharire.divisi.asset.model.Asset;
-
-
 import za.co.za.nharire.divisi.asset.service.GenericAssetServiceImpl;
 import za.co.za.nharire.divisi.enums.AssetType;
 
@@ -53,4 +50,5 @@ public class GenericAssetController {
         GenericAssetServiceImpl<? extends Asset> service = assetServiceFactory.getService(assetType);
         service.delete(id);
     }
+
 }
