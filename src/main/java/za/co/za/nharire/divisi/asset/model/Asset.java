@@ -24,7 +24,7 @@ import java.util.Date;
 @Entity
 @Table(name = "assets")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "asset_type")
+@DiscriminatorColumn(name = "type_of_asset")
 @Getter
 @Setter
 @ToString
@@ -63,7 +63,7 @@ public abstract class Asset {
     private Status status;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "asset_type", insertable = false, updatable = false)
+    @Column(name = "asset_type", insertable = true, updatable = true)
     private AssetType assetType;
     private BigDecimal value;
     private Long farmerId;
