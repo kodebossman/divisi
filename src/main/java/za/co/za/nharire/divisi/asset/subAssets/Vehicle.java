@@ -7,7 +7,7 @@ import lombok.ToString;
 import za.co.za.nharire.divisi.asset.model.Asset;
 
 @Entity
-@Table(name = "vehicles")
+
 @Data
 @ToString(callSuper = true)
 public class Vehicle extends Asset {

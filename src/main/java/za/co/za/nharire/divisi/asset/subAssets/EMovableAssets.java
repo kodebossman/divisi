@@ -11,7 +11,6 @@ import za.co.za.nharire.divisi.asset.model.Asset;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "emovable_assets")
 @Getter
 @Setter
 @ToString(callSuper = true)

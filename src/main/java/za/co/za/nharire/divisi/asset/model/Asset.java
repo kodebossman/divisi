@@ -4,11 +4,16 @@ package za.co.za.nharire.divisi.asset.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
+import za.co.za.nharire.divisi.asset.subAssets.EMovableAssets;
+import za.co.za.nharire.divisi.asset.subAssets.Machinery;
+import za.co.za.nharire.divisi.asset.subAssets.Vehicle;
 import za.co.za.nharire.divisi.enums.AssetType;
 import za.co.za.nharire.divisi.enums.Status;
 
@@ -23,6 +28,15 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "assetType")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Machinery.class, name = "MACHINERY"),
+        @JsonSubTypes.Type(value = Vehicle.class, name = "VEHICLE"),
+        @JsonSubTypes.Type(value = EMovableAssets.class, name = "EMOVABLE_ASSETS")
+})
 public abstract class Asset {
 
     @Id

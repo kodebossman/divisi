@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 @Entity
 @Data
 @ToString(callSuper = true)
-@Table(name = "machinery")
+
 public class Machinery extends Asset {
 
     @Column(name = "manufacturer")

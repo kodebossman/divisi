@@ -1,9 +1,9 @@
 package za.co.za.nharire.divisi.enums;
 
 public enum AssetType {
-        MACHINERY,      Emovable,
+        MACHINERY,
         VEHICLE,
-        EQUIPMENT,
+        EMOVABLE_ASSETS
 
 
 }
