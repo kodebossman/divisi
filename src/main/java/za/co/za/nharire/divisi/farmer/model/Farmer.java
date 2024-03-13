@@ -6,6 +6,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import za.co.za.nharire.divisi.common.BaseEntity;
+import za.co.za.nharire.divisi.project.models.Project;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "farmers", indexes = {@Index(name = "indx_farmers", columnList = "msisdn", unique = true)})
@@ -51,5 +55,8 @@ public class Farmer extends BaseEntity {
 
     @Column(name = "specialisation", length = 100)
     private String specialisation;
+
+    @OneToMany(mappedBy = "farmer", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Project> projects = new ArrayList<>();
 
 }

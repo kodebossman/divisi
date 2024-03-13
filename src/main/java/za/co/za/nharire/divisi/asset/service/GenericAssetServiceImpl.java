@@ -6,10 +6,11 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
 import za.co.za.nharire.divisi.asset.model.Asset;
+
 import za.co.za.nharire.divisi.asset.repository.AssetRepository;
 import za.co.za.nharire.divisi.farmer.repos.FarmerRepository;
+
 
 import java.util.Optional;
 
