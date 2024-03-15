@@ -2,9 +2,7 @@ package za.co.za.nharire.divisi.project.mapper;
 
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
 
 import za.co.za.nharire.divisi.farmer.model.Farmer;
 import za.co.za.nharire.divisi.project.dto.ProjectDto;
@@ -25,6 +23,6 @@ public interface ProjectMapper {
     @Mapping(source = "farmerId", target = "farmer")
     Project toEntityWithFarmer(ProjectDto projectDto, @Context Farmer farmer);
 
-    List<RequirementDto> toDtoList(List<Requirement> requirements);
+    List<RequirementDto> toDtoList(List<Project> requirements);
     List<Requirement> toEntityList(List<RequirementDto> requirementDtos);
 }
